@@ -124,22 +124,22 @@
 	\verb!Gamma!& Note $\Gamma =(n-1)!$  \\
 	\verb!! &$g_n(t;\alpha)=\alpha \frac{(\alpha t)^{n-1}} {(n-1)!}e^{-\alpha t}$\\
 	\verb!! &$\mu=\frac{1}{\alpha}  , \sigma^2=\frac{1}{\alpha^2}$\\
-	\verb!Chi-squared!  & Finite $X_k ~\mathcal{N}(0,1); $V^2=\sum_{k=1}^{n} X_k^2$ \\
-	\verb!! & $g_{n/2}(t;1/2)=\frac{1}{2^{n/2}\Gamma(\frac{n}{2})}t^{\frac{n}{2} -1}e^{-\frac{t}{2}$\\
+	\verb!Chi-squared!  & Finite $X_k ~\mathcal{N}(0,1)$; $V^2=\sum_{k=1}^{n} X_k^2$ \\
+	\verb!! & $g_{n/2}(t;1/2)=\frac{1}{2^{n/2}\Gamma(\frac{n}{2})}t^{\frac{n}{2} -1}e^{-\frac{t}{2}}$\\
 	\verb!! &$\mu=n  , \sigma^2=2n$\\	
 	\verb!Exponential!  & A model for true randomness \\
 	\verb!! & $f(x)=\alpha e^{-\alpha x}$ for $x>0$\\
 	\verb!! &$\mu=\frac{1}{\alpha}  , \sigma^2=\frac{1}{\alpha^2}$\\
 	\verb!Normal! & The one to rule them all... \\
 	\verb!! & $f(x) = \frac{1}{\sqrt{(2 \pi)} \sigma} e^{-(x-\mu)^{2}/2 \sigma^{2}}$ \\
-	\verb!! & \hspace{-75} Even function, strictly positive, dies monotonically...\\
+	\verb!! & \hspace{-75pt} Even function, strictly positive, dies monotonically...\\
 	\verb!Multivariate Normal! & Note that x and m are vectors \\
-	\verb!! & \hspace{-55}$f(x)=\frac{1}{2\pi^{\frac{n}{2}} det(A)^{\frac{1}{2}}}exp(-\frac{1}{2}(x-m)A^{-1}(x-m)^T)$
+	\verb!! & \hspace{-55pt}$f(x)=\frac{1}{2\pi^{\frac{n}{2}} det(A)^{\frac{1}{2}}}exp(-\frac{1}{2}(x-m)A^{-1}(x-m)^T)$
 	
 \end{tabular}
 
 \textbf{Negative Binomial Trick:}
-$ { r+k-1 \choose k}q^kp^r={-r \choose k}(-q)^kp^r
+$ { r+k-1 \choose k}q^kp^r={-r \choose k}(-q)^kp^r$
 \section{Properties of Distributions}
 \textbf{Shifting and Scaling} \textit{If two densities come from same type: $\frac{1}{a}f(\frac{x-m}{a})$ then $\mu =a\mu +m$ $\sigma^2=a^2\sigma^2$}\\
 \textbf{Convolution }\textit{The convolution of any pair of distributions must necessarily be a distribution}\\
@@ -155,25 +155,30 @@ $ { r+k-1 \choose k}q^kp^r={-r \choose k}(-q)^kp^r
 \textbf{Sum of Exponentials} \textit{Sum of \textbf{independent} exponential random variables from a common exponential density $\alpha e^{-\alpha x}$ for $x>0$ is $S_n$, the sum $S_n= X_1+X_2+...+X_n$ has the \textbf{gamma density}}.\\
 \textbf{Memoryless Property} \textit{\textbf{ONLY} the exponential and geometric distributions are memoryless. The random variable X exhibits the memoryless property if $P\{X>s+t|X>s\}=P\{X>t\}$ or recast
 	$P\{X>s+t | X>s\}=P\{X>t\}$ if and only if $P\{X>s+t\}=P\{X>s\}P\{X>t\}$}\\
-\textbf{Specification of a
-\section{$\sigma$-algebras}
+\textbf{Rotation of Bivariate Normal} \textit{There exists a rotation of a bivariate normal st. the normal coordinates become independent}
+\textbf{Max variance for Bernoulli Trial} \textit{Is $1/4$ which occurs if $p=1/2$. Bernoulli trials are assumed to be independent unless otherwise stated.}
+
 \section{Expectation}
 \textbf{Variance} $Var(X)=E(X^2)-E(X)^2$\\
 \textbf{Covariance} $Cov(X,Y)=E(XY)- E(X)E(Y)$\\
 \textbf{Law of the Unconcious Statistician}
- \textit{If X is a discrete r.v. and g is a function from {$\mathds{R}\rightarrow \mathds{R}$} then, $E(g(X))=\sum_{x}g(x)P(X=x)$}
+ \textit{If X is a discrete r.v. and g is a function from {$R\rightarrow R$} then, $E(g(X))=\sum_{x}g(x)P(X=x)$}
 \textbf{Independence} \textit{Independent variables are uncorrelated, but uncorrelated variables are not necessarily independent. However, this is a necessary and sufficient condition if we are talking about the marginals of a normal density}
 \textbf{Additivity} \textit{Expectation is additive. Variance is additive if the summands are independent.}
+\textbf{Conditional Expectation} \textit{$E(X_2)=E(E(X_2|X_1))$}\\
+
 
 \section{Conditional Probability}
 $P(A|H)=\frac{P(A \cap H)}{P(H)}$\\
 $P_H: A \rightarrow P(A|H)$\\
-$P(A_1 \cap A_2 \cap ... \cap A_n)= P(A_1|A_2 \cap ... \cap A_n)$\\ $\times P(A_2|A_3 \cap ... \cap A_n) \times P(A_{n-1}|P(A_n) \times P(A_n)$
-\section{Bayes Rule}
+$P(A_1 \cap A_2 \cap ... \cap A_n)= P(A_1|A_2 \cap ... \cap A_n)$\\ $\times P(A_2|A_3 \cap ... \cap A_n) \times P(A_{n-1}|P(A_n) \times P(A_n)$\\
+\textbf{Bayes Rule}
 $P(A_k|H)=\frac{P(H|A_k)P(A_k)}{\sum_{j \geq 1}{} P(H|A_j)P(A_j)}$
 
 \section{Inclusion-Exclusion}
-\textbf{Di Finneti's Theorem}
+\textit{$S_k= \sum (P(A_{j_1}) \cap...\cap P(A_{j_k}))={n+1 \choose k} (1-ka)^n_+$}\\
+\textbf{De Finneti's Theorem}\\
+\textit{$P\{L_1>x_1,...,L_{n=1}>x_{n+1}\}=(1-\frac{x_1}{\tau}-\frac{x_2}{\tau}...-\frac{x_{n+1}}{\tau})^n_+$}\\
 \section{Limit Laws}
 \textbf{Weak Law of Large Numbers}\\
 \textbf{Strong Law of Large Numbers}\\
@@ -184,7 +189,7 @@ $P(A_k|H)=\frac{P(H|A_k)P(A_k)}{\sum_{j \geq 1}{} P(H|A_j)P(A_j)}$
 
 \section{Inequalities}
 \textbf{Convexity} The chord lies above the curve\\
-$\Psi(\alpha x +(1-\alpha)y)\leq \alpha\Psi(x)+\(1-\alpha)\Psi(y)$\\
+$\Psi(\alpha x +(1-\alpha)y)\leq \alpha\Psi(x)+(1-\alpha)\Psi(y)$\\
 \textbf{Jensen} If $\Psi$ is convex , $X$ is integrable, and $\Psi(x)$ is integrable then:
 $\Psi(E(x))\leq E(\Psi(x))$\\
 \textbf{Another of Jensen} $E(X^2)\geq E(X)^2$\\
@@ -195,7 +200,7 @@ simplifies to: $ xy \leq (1/p) x^p +(1/q) y^p$\\
 \textbf{Cauchy-Schwarz} If $p=q=2$ in Holder's $\rightarrow$ $|E(XY)^2| \leq E(X^2)E(Y^2)$\\
 \textbf{Minkowski} $p\geq 1$ then $ ||x+y|_p \leq ||x||_p + ||y||_p$
 \textbf{Chebyshev}$P\{|S_n-n\mu|\geq n\epsilon\}\leq \frac{n\sigma^2}{n^2\epsilon^2}$\\
-\textbf{Chernoff} $P\{S_n\geq t} \leq (\inf\limits_{\lambda\geq 0} e^{-\lambda t/n}M(\lambda))^n $ and\\
+\textbf{Chernoff} $P\{S_n\geq t\} \leq (\inf\limits_{\lambda\geq 0} e^{-\lambda t/n}M(\lambda))^n $ and\\
 $P\{S_n\leq t\} \leq (\inf\limits_{\lambda\geq 0} e^{-\lambda t/n}M(-\lambda))^n $\\ 
 Where $M(\lambda)=E(e^{\lambda X_j})=\int_{\mathcal{R}} e^{\lambda x}dF(x)$ is the moment generating function\\
 \textbf{Markov}$P\{X\geq a\} \leq \frac {E(X)}{a}$\\
@@ -209,7 +214,7 @@ $\log _b \left( {x^n } \right) = n\log _b \left( x \right) $\\
 $\log _b \left( 1 \right) = 0 $\\
 $\log _b \left( b \right) = 1 $\\
 $\log _b \left( {xy} \right) = \log _b \left( x \right) + \log _b \left( y \right)$\\
-\vspace{20}
+\vspace{20pt}
 \begin{multicols*}{3}
 $log(\infty)\rightarrow \infty$\\
 $log(0)\rightarrow -\infty$\\
@@ -234,24 +239,37 @@ $\sum_{k=0}^{\infty}{\alpha \choose k}z^k=(1+z)^\alpha, |z|<1$\\
 $\sum_{k=0}^{n}{n \choose k}x^{n-k}y^k=(x+y)^n$\\
 \section{Integration}
 \begin{multicols*}{2}
-$\int x^n \dx = \frac{1}{n+1}x^{n+1}, \hspace{1ex} n\neq-1$
+$\int x^n dx = \frac{1}{n+1}x^{n+1}, \hspace{1ex} n\neq-1$
 
-$\int \frac{1}{x}\dx = \ln |x|$
+$\int \frac{1}{x} dx = \ln |x|$
 
-$\int u \hspace{2pt} \dd{v} = uv - \int v du$
+%$\int u \hspace{2pt} \dd{v} = uv - \int v du$
 
-$\int e^x \dx = e^x $
+$\int e^x dx = e^x $
 
-$\int a^x \dx = \frac{1}{\ln a} a^x$
+$\int a^x dx = \frac{1}{\ln a} a^x$
 
-$\int \ln x \dx = x \ln x - x$
+$\int \ln x dx = x \ln x - x$
 
-$\int \sin x \dx = -\cos x$
+$\int \sin x dx = -\cos x$
 
-$\int \cos x \dx = \sin x$
+$\int \cos x dx = \sin x$
+
 \end{multicols*}
 
+\section{The Bernoulli Schema}
+\textbf{Theorem 1} \textit{Suppose $X_1,...,X_n$ is a sequence of Bernoulli tials with success probability p. Then the sume $S_n=X_1+...+X_n$ has a distribution $b_n(k)={n \choose k }p^kq^{n-k}$. Recall as a matter of convention the definition for real $t$ and integer $k$ that ${t \choose k} =t(t-1)(t-2)...(t-k+1)/k!$ if $k\geq 0$ and $0$ otherwise.}
+\textbf{Example: Ball and Urn} \textit{Put n balls in m urns, probability that there are k balls in first r: ${n \choose k } \frac{r}{m}^k(1-\frac{r}{m})^{n-k}$}\\
+\textbf{Example: Polls} \textit{Select n individuals from population, an unknown fraction p support policy. All samples are independent.$S_n=\sum_{j=1}^{n}=Z_j$ is the number of individuals in favor, $S_n \sim b_n(k;p)$. Let $\zeta \in [0,1]$ be a guess for $p$. $b(\zeta)=b_n(S_n;\zeta)={n \choose S_n}\zeta^{S_n}(1-\zeta)^{n-S_n}$, then $b(\zeta)$ is maximized at $\zeta=(S_n/n)$. The sample mean is $\arg max_{\zeta}b_n(S_n);\zeta)$ which is the mean of the empirical distribution. Thus, p  estimated by this value yields the largest probability of observations consistent with the data. We say that the sample mean is the unbiased estimator of p}\\
+\textbf{Error Bound on Sample Mean} \textit{Via Chebyshev $P\{|\frac{1}{n}S_n -p|\geq\epsilon\}=\sum b_n(k;p) \leq \frac{pq}{n\epsilon^2}\leq \frac{1}{4n\epsilon^2}$}\\
+\textbf{Example: Random Walks} \textit{The number of paths from (a,b) to (a',b') is $N_n(k)={n \choose \frac{n+k}{2}}$ where $n=a'-a$ and $k=b'-b$. If the path goes through strictly positive values the number of such paths is $N^{+}_{n}(k)=N_{n-1}(k-1)-N_{n-1}(k+1) = {n-1 \choose \frac{n+k}{2}-1}-{n-1 \choose \frac{n+k}{2}}=\frac{k}{n}{n \choose \frac{n+k}{2}}$}\\
+\textbf{Example: Returns} \textit{The probability of a return is $ P\{S_{2}=N_{2v}(0)2^{-2v}={2v \choose v}2^{-2v}$}\\
+\textbf{Example: Waiting Time} \textit{}\\
+\textbf{Example: Population Size} \textit{}\\
 
+\section{The Essence of Randomness}
+
+\section{The Coda of the Normal}
 
 \end{multicols*}
 \end{document}
