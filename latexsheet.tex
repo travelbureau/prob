@@ -38,7 +38,7 @@
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{ \geometry{top=.25in,left=.25in,right=.25in,bottom=.25in} }
 	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
 		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
 		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
@@ -126,8 +126,10 @@
 	\verb!! &$\mu=\frac{1}{\alpha}  , \sigma^2=\frac{1}{\alpha^2}$\\
 	\verb!Chi-squared!  & Finite $X_k ~\mathcal{N}(0,1); $V^2=\sum_{k=1}^{n} X_k^2$ \\
 	\verb!! & $g_{n/2}(t;1/2)=\frac{1}{2^{n/2}\Gamma(\frac{n}{2})}t^{\frac{n}{2} -1}e^{-\frac{t}{2}$\\
+	\verb!! &$\mu=n  , \sigma^2=2n$\\	
 	\verb!Exponential!  & A model for true randomness \\
 	\verb!! & $f(x)=\alpha e^{-\alpha x}$ for $x>0$\\
+	\verb!! &$\mu=\frac{1}{\alpha}  , \sigma^2=\frac{1}{\alpha^2}$\\
 	\verb!Normal! & The one to rule them all... \\
 	\verb!! & $f(x) = \frac{1}{\sqrt{(2 \pi)} \sigma} e^{-(x-\mu)^{2}/2 \sigma^{2}}$ \\
 	\verb!! & \hspace{-75} Even function, strictly positive, dies monotonically...\\
@@ -145,17 +147,23 @@ $ { r+k-1 \choose k}q^kp^r={-r \choose k}(-q)^kp^r
 \textit{Suppose $X_1,X_2,...X_n$ are independent and for each k $X_k$ is normal with mean $\mu_k$ and variance $\sigma_k$. Then $S_n = \sum_{k=1}^{n}X_k$ is normal with mean $\sum_{k=1}^{n} \mu_k$ and variance  $\sum_{k=1}^{n} \sigma_k$, or in other words normal densities are stable under convolution. Also stable under \textbf{non-degenerate} linear transformation}\\
 \textbf{Translation Invariance: Uniform}\\
 \textbf{Sum of Independent Poisson RVs}
-\textit{For \textbf{independent} random variables drawn from Poisson distribution mean is $\lambda_1 + \lambda_2$}\\
+\textit{For \textbf{independent} random variables drawn from Poisson distribution is Poisson and the mean is $\lambda_1 + \lambda_2$}\\
+\textbf{Sum of Independent Binomials} is also binomial.\\
 \textbf{Sum of Independent Gamma RVs}
 \textit{Given $X_1 \sim g_{n_1}(x_1,\alpha)$ and $X_2 \sim g_{n_2}(x_2,\alpha)$ then $Z=X_1+X_2 \sim g_{n_1+n_2}(z,\alpha)$. Note the RV's must have the same mean $\frac{1}{\alpha}$}\\
 \textbf{The marginals of a multivariate normal are normal }\textit{Note: a system of variables with marginal normal densities need not have a jointly normal density, and, in fact a joint density need not even exist}\\
 \textbf{Sum of Exponentials} \textit{Sum of \textbf{independent} exponential random variables from a common exponential density $\alpha e^{-\alpha x}$ for $x>0$ is $S_n$, the sum $S_n= X_1+X_2+...+X_n$ has the \textbf{gamma density}}.\\
+\textbf{Memoryless Property} \textit{\textbf{ONLY} the exponential and geometric distributions are memoryless. The random variable X exhibits the memoryless property if $P\{X>s+t|X>s\}=P\{X>t\}$ or recast
+	$P\{X>s+t | X>s\}=P\{X>t\}$ if and only if $P\{X>s+t\}=P\{X>s\}P\{X>t\}$}\\
+\textbf{Specification of a
 \section{$\sigma$-algebras}
 \section{Expectation}
 \textbf{Variance} $Var(X)=E(X^2)-E(X)^2$\\
 \textbf{Covariance} $Cov(X,Y)=E(XY)- E(X)E(Y)$\\
 \textbf{Law of the Unconcious Statistician}
-\textit{If X is a discrete r.v. and g is a function from {$\mathds{R}\rightarrow \mathds{R}$} then, $E(g(X))=\sum_{x}g(x)P(X=x)$}
+ \textit{If X is a discrete r.v. and g is a function from {$\mathds{R}\rightarrow \mathds{R}$} then, $E(g(X))=\sum_{x}g(x)P(X=x)$}
+\textbf{Independence} \textit{Independent variables are uncorrelated, but uncorrelated variables are not necessarily independent. However, this is a necessary and sufficient condition if we are talking about the marginals of a normal density}
+\textbf{Additivity} \textit{Expectation is additive. Variance is additive if the summands are independent.}
 
 \section{Conditional Probability}
 $P(A|H)=\frac{P(A \cap H)}{P(H)}$\\
@@ -165,10 +173,15 @@ $P(A_1 \cap A_2 \cap ... \cap A_n)= P(A_1|A_2 \cap ... \cap A_n)$\\ $\times P(A_
 $P(A_k|H)=\frac{P(H|A_k)P(A_k)}{\sum_{j \geq 1}{} P(H|A_j)P(A_j)}$
 
 \section{Inclusion-Exclusion}
+\textbf{Di Finneti's Theorem}
 \section{Limit Laws}
 \textbf{Weak Law of Large Numbers}\\
 \textbf{Strong Law of Large Numbers}\\
 \textbf{Central Limit Theorem}\\
+\textit{Suppose $X_1,X-2,...$ is a sequence of independent random variable drawn from a common distribution F with mean zero and variance one. For each n, let $S_n*=(X_1+...+X_n)/\sqrt{n}$. Then $S_n*$ converges in distribution to the standard normal.}\\
+	$P\{a<S_n*<b\}\rightarrow\Phi(b)-\Phi(a)=\frac{1}{\sqrt{2\pi}}\int_{a}^{b}e^{-x^2/2}dx$
+\textit{If $E(X_k)=\mu$ and $Var(X_k)=\sigma^2$ then we can center and scale the variables such that $S_n*=(S_n - n\mu/\sqrt{n}\sigma)$ and the theorem holds for the new properly normalize $S_n*$.}
+
 \section{Inequalities}
 \textbf{Convexity} The chord lies above the curve\\
 $\Psi(\alpha x +(1-\alpha)y)\leq \alpha\Psi(x)+\(1-\alpha)\Psi(y)$\\
@@ -181,13 +194,64 @@ simplifies to: $ xy \leq (1/p) x^p +(1/q) y^p$\\
 \textbf{Holder's} $|E(XY)| \leq E(|XY|) \leq E(|X|)^{1/p} E(|Y|)^{1/q}$\\ 
 \textbf{Cauchy-Schwarz} If $p=q=2$ in Holder's $\rightarrow$ $|E(XY)^2| \leq E(X^2)E(Y^2)$\\
 \textbf{Minkowski} $p\geq 1$ then $ ||x+y|_p \leq ||x||_p + ||y||_p$
-\textbf{Chebyshev}$P\{|S_n-n\mu|\geq n\epsilon\}\leq \frac{n\sigma^2}{n^2\epsilon^2}\\
+\textbf{Chebyshev}$P\{|S_n-n\mu|\geq n\epsilon\}\leq \frac{n\sigma^2}{n^2\epsilon^2}$\\
 \textbf{Chernoff} $P\{S_n\geq t} \leq (\inf\limits_{\lambda\geq 0} e^{-\lambda t/n}M(\lambda))^n $ and\\
-$P\{S_n\leq t} \leq (\inf\limits_{\lambda\geq 0} e^{-\lambda t/n}M(-\lambda))^n $\\ 
+$P\{S_n\leq t\} \leq (\inf\limits_{\lambda\geq 0} e^{-\lambda t/n}M(-\lambda))^n $\\ 
 Where $M(\lambda)=E(e^{\lambda X_j})=\int_{\mathcal{R}} e^{\lambda x}dF(x)$ is the moment generating function\\
-\textbf{Markov}$P\{X\eq a\} \leq \frac {E(X)}{a}$\\
+\textbf{Markov}$P\{X\geq a\} \leq \frac {E(X)}{a}$\\
 \textbf{Normal Tail Bound p 317} $\frac{\phi(x)}{x}(1-\frac{1}{x^2}) < 1- \Phi(x) < \frac {\phi(x)}{x} $\\
 \textbf{Normal Tail Bound p 165} $\int_{t}^{\infty}\phi(x) dx \leq \frac{1}{2}e^{-t^2/2}$
+\section{Logarithmic Identities}
+$y = \log _b \left( x \right){\rm{ iff }}x = b^y$\\
+$\log _b \left( {\frac{x}{y}} \right) = \log _b \left( x \right) - \log _b \left( y \right) $\\
+$\log _b \left( x \right) = \log _b \left( c \right)\log _c \left( x \right) = \frac{{\log _c \left( x \right)}}{{\log _c \left( b \right)}} $\\
+$\log _b \left( {x^n } \right) = n\log _b \left( x \right) $\\
+$\log _b \left( 1 \right) = 0 $\\
+$\log _b \left( b \right) = 1 $\\
+$\log _b \left( {xy} \right) = \log _b \left( x \right) + \log _b \left( y \right)$\\
+\vspace{20}
+\begin{multicols*}{3}
+$log(\infty)\rightarrow \infty$\\
+$log(0)\rightarrow -\infty$\\
+$log(1)=0$
+\end{multicols*}
+\section{Exponential Identities}
+\begin{multicols*}{2}
+$x^a x^b = x^{\left( {a + b} \right)} $\\
+$x^a y^a = \left( {xy} \right)^a$\\
+$\left( {x^a } \right)^b = x^{\left( {ab} \right)}$\\
+$x^{\left( {a - b} \right)} = \frac{{x^a }}{{x^b }} $\\
+\end{multicols*}
+\section{Common Infinite Series}
+\textbf{Exponential}\\
+$\sum_{k=0}^{\infty}\frac{z^k}{k!}=e^z$\\
+$\sum_{k=0}^{\infty}k\frac{z^k}{k!}=ze^z$ Mean of the Poisson\\
+$\sum_{k=0}^{\infty}k^2\frac{z^k}{k!}=(z+z^2)e^z$ Second moment of Poisson\\
+$\sum_{k=0}^{\infty}k^3\frac{z^k}{k!}=(z+3z^2+z^3)e^z$\\
+$\sum_{k=0}^{\infty}k^4\frac{z^k}{k!}=(z+7z^2+6z^3+z^4)e^z$ \\
+\textbf{Binomial}\\
+$\sum_{k=0}^{\infty}{\alpha \choose k}z^k=(1+z)^\alpha, |z|<1$\\
+$\sum_{k=0}^{n}{n \choose k}x^{n-k}y^k=(x+y)^n$\\
+\section{Integration}
+\begin{multicols*}{2}
+$\int x^n \dx = \frac{1}{n+1}x^{n+1}, \hspace{1ex} n\neq-1$
+
+$\int \frac{1}{x}\dx = \ln |x|$
+
+$\int u \hspace{2pt} \dd{v} = uv - \int v du$
+
+$\int e^x \dx = e^x $
+
+$\int a^x \dx = \frac{1}{\ln a} a^x$
+
+$\int \ln x \dx = x \ln x - x$
+
+$\int \sin x \dx = -\cos x$
+
+$\int \cos x \dx = \sin x$
+\end{multicols*}
+
+
 
 \end{multicols*}
 \end{document}
