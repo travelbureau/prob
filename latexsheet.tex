@@ -133,6 +133,7 @@
 	\verb!Normal! & The one to rule them all... \\
 	\verb!! & $f(x) = \frac{1}{\sqrt{(2 \pi)} \sigma} e^{-(x-\mu)^{2}/2 \sigma^{2}}$ \\
 	\verb!! & \hspace{-75pt} Even function, strictly positive, dies monotonically...\\
+	\verb!! & \hspace{-75pt} Can be sometimes written as $N(\mu,\sigma^2)$...\\
 	\verb!Multivariate Normal! & Note that x and m are vectors \\
 	\verb!! & \hspace{-55pt}$f(x)=\frac{1}{2\pi^{\frac{n}{2}} det(A)^{\frac{1}{2}}}exp(-\frac{1}{2}(x-m)A^{-1}(x-m)^T)$
 	
@@ -157,7 +158,8 @@ $ { r+k-1 \choose k}q^kp^r={-r \choose k}(-q)^kp^r$
 	$P\{X>s+t | X>s\}=P\{X>t\}$ if and only if $P\{X>s+t\}=P\{X>s\}P\{X>t\}$}\\
 \textbf{Rotation of Bivariate Normal} \textit{There exists a rotation of a bivariate normal st. the normal coordinates become independent}
 \textbf{Max variance for Bernoulli Trial} \textit{Is $1/4$ which occurs if $p=1/2$. Bernoulli trials are assumed to be independent unless otherwise stated.}\\
-\textbf{Limit of the geometric} \textit{The exponential distribution is the continuous limit of the geometric distribution. Use two integration by parts to show variance is $\frac{1}{\alpha^2}$ and the mean is $\frac{1}{\alpha}$}
+\textbf{Limit of the geometric} \textit{The exponential distribution is the continuous limit of the geometric distribution. Use two integration by parts to show variance is $\frac{1}{\alpha^2}$ and the mean is $\frac{1}{\alpha}$}\\
+\textbf{The Gamma Density is Closed Under Convolutions} \textit{For every fixed $\alpha>0$ the family of gamma densities $\{g_v(\dot;\alpha), v>0\}$ is closed under convolutions, that is, $(g_\mu\star g_\nu)(x)=g_{\mu+\nu}(x) \forall\mu \nu$. Restatement of earlier property.}
 
 \section{Expectation}
 \textbf{Variance} $Var(X)=E(X^2)-E(X)^2$\\
@@ -275,7 +277,7 @@ $\int \cos x dx = \sin x$
 
 \section{The Essence of Randomness}
 \textbf{Buffon's Needle}\\
-\textbf{Gamma Function etc} \textit{Continuous version}
+\textbf{Gamma Function etc} \textit{Continuous version $g_v(x,\alpha)=\frac{\alpha}{\Gamma(v)}(\alphax)^{v-1}e^{-\alpha x}$}
 \section{The Coda of the Normal}
 
 \end{multicols*}
