@@ -156,7 +156,8 @@ $ { r+k-1 \choose k}q^kp^r={-r \choose k}(-q)^kp^r$
 \textbf{Memoryless Property} \textit{\textbf{ONLY} the exponential and geometric distributions are memoryless. The random variable X exhibits the memoryless property if $P\{X>s+t|X>s\}=P\{X>t\}$ or recast
 	$P\{X>s+t | X>s\}=P\{X>t\}$ if and only if $P\{X>s+t\}=P\{X>s\}P\{X>t\}$}\\
 \textbf{Rotation of Bivariate Normal} \textit{There exists a rotation of a bivariate normal st. the normal coordinates become independent}
-\textbf{Max variance for Bernoulli Trial} \textit{Is $1/4$ which occurs if $p=1/2$. Bernoulli trials are assumed to be independent unless otherwise stated.}
+\textbf{Max variance for Bernoulli Trial} \textit{Is $1/4$ which occurs if $p=1/2$. Bernoulli trials are assumed to be independent unless otherwise stated.}\\
+\textbf{Limit of the geometric} \textit{The exponential distribution is the continuous limit of the geometric distribution. Use two integration by parts to show variance is $\frac{1}{\alpha^2}$ and the mean is $\frac{1}{\alpha}$}
 
 \section{Expectation}
 \textbf{Variance} $Var(X)=E(X^2)-E(X)^2$\\
@@ -243,7 +244,7 @@ $\int x^n dx = \frac{1}{n+1}x^{n+1}, \hspace{1ex} n\neq-1$
 
 $\int \frac{1}{x} dx = \ln |x|$
 
-%$\int u \hspace{2pt} \dd{v} = uv - \int v du$
+$\int u \hspace{2pt} dv = uv - \int v du$
 
 $\int e^x dx = e^x $
 
@@ -264,11 +265,17 @@ $\int \cos x dx = \sin x$
 \textbf{Error Bound on Sample Mean} \textit{Via Chebyshev $P\{|\frac{1}{n}S_n -p|\geq\epsilon\}=\sum b_n(k;p) \leq \frac{pq}{n\epsilon^2}\leq \frac{1}{4n\epsilon^2}$}\\
 \textbf{Example: Random Walks} \textit{The number of paths from (a,b) to (a',b') is $N_n(k)={n \choose \frac{n+k}{2}}$ where $n=a'-a$ and $k=b'-b$. If the path goes through strictly positive values the number of such paths is $N^{+}_{n}(k)=N_{n-1}(k-1)-N_{n-1}(k+1) = {n-1 \choose \frac{n+k}{2}-1}-{n-1 \choose \frac{n+k}{2}}=\frac{k}{n}{n \choose \frac{n+k}{2}}$}\\
 \textbf{Example: Returns} \textit{The probability of a return is $ P\{S_{2}=N_{2v}(0)2^{-2v}={2v \choose v}2^{-2v}$}\\
-\textbf{Example: Waiting Time} \textit{}\\
-\textbf{Example: Population Size} \textit{}\\
+\textbf{Example: Waiting Time} \textit{The waiting time is the wait until the first succes $w(k;p)=P(W=k)=q^kp (k\geq 0)$. Now $\sum_{k}w(k;p)=p \sum_{k=0}^{\infty}q^k=p/(1-q)=1$. Thus $w(k;p)$ is called the geometric distribution. Useful manipulation: $\sum_{k}^{\infty}q^k=1/(1-q)$}\\
+\textbf{Sum of Independent RVs ~ geometric}\\
+\textit{Suppose $\{W_i, i\geq 1\}$ is a sequence of independent geometric random variables with common success parameter $p>0$. For each r, let $T_r=W_1+W_2+...+W_r$ and let $w_r(k;p) =P(T_r=k)$ be its distribution. Then $w_r(k;p)={r+k-1 \choose k} q^kp^r$ this is the negative binomial.}\\
+\textbf{Problem of the Points} \textit{ $P_m,n(p)=\sum_{k=0}^{n-1}{-m \choose k}(-q)^kp^m$ where m is the require points to win and n is the maximum number of failures}\\
+\textbf{Example: Population Size} \textit{Hypergeometric Distribution: $h(i)=h_{m,n}(i;r)=\frac{{m \choose i}{n-m \choose r-i}}{{n \choose r}}$ where $(0 \leq u \leq r)$}\\
+\textbf{Vandermonde's Convolution} \textit{ $\sum_{i} {m \choose i} {n-m \choose r-i} = {n \choose r}$ can be used to show hypergeometric is a density}\\
+\textbf{Another funny sum} \textit{${n \choose 0}^2 +{n \choose 1}^2 +...+ {n \choose n}^2={2n \choose n}$}\\
 
 \section{The Essence of Randomness}
-
+\textbf{Buffon's Needle}\\
+\textbf{Gamma Function etc} \textit{Continuous version}
 \section{The Coda of the Normal}
 
 \end{multicols*}
