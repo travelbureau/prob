@@ -177,9 +177,8 @@ $P_H: A \rightarrow P(A|H)$\\
 $P(A_1 \cap A_2 \cap ... \cap A_n)= P(A_1|A_2 \cap ... \cap A_n)$\\ $\times P(A_2|A_3 \cap ... \cap A_n) \times P(A_{n-1}|P(A_n) \times P(A_n)$\\
 \textbf{Bayes Rule}
 $P(A_k|H)=\frac{P(H|A_k)P(A_k)}{\sum_{j \geq 1}{} P(H|A_j)P(A_j)}$
-
 \section{Inclusion-Exclusion}
-\textit{$S_k= \sum (P(A_{j_1}) \cap...\cap P(A_{j_k}))={n+1 \choose k} (1-ka)^n_+$}\\
+\textit{$S_k= \sum (P(A_{j_1}) \cap...\cap P(A_{j_k}))$}\\
 \textit{$P(A_1 \cup ...\cup A_n)=\sum_{k=1}^{n} (-1)^{k-1}S_k$}\\
 Let $P(m)$ be probability that exactly $m$ events occur \\
 Then, \textit{$P(m)=\sum_{k=0}^{n-m}(-1)^{k}{m+k \choose m}S_{m+k}$}\\ 
@@ -298,7 +297,15 @@ $\int \cos x dx = \sin x$
 \section{Random}
 \textbf{The Hockey Stick Identity}
 \textit{$\sum_{j=k}^{n}{j \choose n} = {n+1 \choose k+1}$}
+\section{Borel-Cantelli Lemma}
+\textit{(Lemma 1)} If the series $\sum_{n}P(A_n)$ converges. Then $P(\lim\sup_{n}A_{n})=P\{A_{n} i.o\}=0$, or, with probability one only finitely many of the events $A_n$ occurs.\\
+\textit{(Lemma 2)} If the series $\sum_{n}P(A_n)$ diverges. If the events $\{A_n, n\geq1\}$ are independent then $P(\lim\sup_{n}A_{n})=P\{A_{n} i.o\}=1$, and the events $A_n$ occur infinitely often with probability one.\\
 \section{Convergence}
-\textit{A sequence of random variables $\{X_1,X_2,...\}$ converges almost surely to a random variable $X$ if $P\{s\in S:lim_{n\rightarrow \infty}X_n(s)=X_s\}=1$}
+\textit{(Almost everywhere)A sequence of random variables $\{X_n,n\geq 1\}$ converges almost everywhere to a random variable $X$ if $P\{\omega:X_{n}(\omega) \not\rightarrow X(\omega)\}=0$}\\
+\textit{(Theorem) A random sequence $\{X_n, n\geq1\}$ converges a.e.\ to a random variable $X$ iff, for every $\epsilon\geq0$, we have $P(\lim\sup_n\{|X_n-X|<\epsilon\})=1$, or  $P(\lim\inf_n\{|X_n-X|\geq\epsilon\})=0$}\\
+\textit{(Theorem) A random sequence $\{X_n, n\geq1\}$ converges a.e.\ iff, for every $\epsilon\geq0$, as $n\rightarrow \infty$, $P(\cup_{j\geq 1}\{|X_{n+j}-X_n|\geq\epsilon\})\rightarrow0$}\\
+\textit{(In probability)A sequence of random variables $\{X_n,n\geq 1\}$ converges in probability to a random variable $X$ if $\lim_n P\{|X_n-X|\geq\epsilon\})\}=0$, for every $\epsilon>0$}
+\textit{(Theorem) Convergence a.e.\ implies convergence in probability}
+\textit{(From convergence in P to a.e.) Show $\sum_{n}P\{|X_n-X|\geq \epsilon <\infty\}$, then by BC Lemma $P\{|X_n-X|\geq \epsilon \,i.o. \}=0$. Hence being by showing convergence in probability then leverage BC lemma to show that convergence is in a.e} 
 \end{multicols*}
 \end{document}
