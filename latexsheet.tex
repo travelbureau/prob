@@ -123,7 +123,7 @@
 	\verb!! &$\mu=\frac{1}{2}(a+b), \sigma^2=\frac{1}{12}(b-a)$\\
 	\verb!Gamma!& Note $\Gamma =(n-1)!$  \\
 	\verb!! &$g_n(t;\alpha)=\alpha \frac{(\alpha t)^{n-1}} {(n-1)!}e^{-\alpha t}$\\
-	\verb!! &$\mu=\frac{1}{\alpha}  , \sigma^2=\frac{1}{\alpha^2}$\\
+	\verb!! &$\mu=\frac{n}{\alpha}  , \sigma^2=\frac{n}{\alpha^2}$\\
 	\verb!Chi-squared!  & Finite $X_k ~\mathcal{N}(0,1)$; $V^2=\sum_{k=1}^{n} X_k^2$ \\
 	\verb!! & $g_{n/2}(t;1/2)=\frac{1}{2^{n/2}\Gamma(\frac{n}{2})}t^{\frac{n}{2} -1}e^{-\frac{t}{2}}$\\
 	\verb!! &$\mu=n  , \sigma^2=2n$\\	
@@ -186,18 +186,18 @@ Then, \textit{$P(m)=\sum_{k=0}^{n-m}(-1)^{k}{m+k \choose m}S_{m+k}$}\\
 Let $\tau>0$ and $L_1 ,..., L_{n+1}$ are successive spacings engendered by $n$ random points in iterval $[0,\tau)$, for every choice $x_1\geq 0, ...,$
 \textit{$P\{L_1>x_1,...,L_{n=1}>x_{n+1}\}=(1-\frac{x_1}{\tau}-\frac{x_2}{\tau}...-\frac{x_{n+1}}{\tau})^n_+$}\\
 \textit{(Covering Problem) $n+1$ random arcs, each of length $a$, $X_0,...,X_n$ random points on circle, probability that arcs cover unit circle}
-$A_j:$ event $j$th spacing $L_j$ exceeds $a$. \textit{$P(A_1 \cup ...\cup A_n)=(1-ka)^n_+$}
+$A_j:$ event $j$th spacing $L_j$ exceeds $a$. \textit{$P(A_{j1} \cap ...\cap A_{jk})=(1-ka)^n_+$}
 \textit{$S_k= \sum (P(A_{j_1}) \cap...\cap P(A_{j_k}))={n+1 \choose k} (1-ka)^n_+$}\\
 \textit{$c_{n+1}=P(A_{1}^{c} \cup ...\cup A_{n}^{c})=\sum_{k=0}^{n+1}(-1)^{k}{n+1 \choose k}(1-ka)^n_+$ }  
 \section{Limit Laws}
 \textbf{Weak Law of Large Numbers}(Khinchin)\\
-If $X_1,X-2,...$ is a sequence of independent random variable with common distibution with finite mean $\mu$ and let $S_n=(X_1+...+X_n)$ for each $n$. Then $\frac{1}{n} S_n \rightarrow^{p} \mu$. Or, $P\{|\frac{1}{n} S_n - \mu | \geq \epsilon\} \rightarrow 0$ as $n \rightarrow \infty$ for every choice $\epsilon>0$\\
+If $X_1,X_2,...$ is a sequence of independent random variable with common distibution with finite mean $\mu$ and let $S_n=(X_1+...+X_n)$ for each $n$. Then $\frac{1}{n} S_n \rightarrow^{p} \mu$. Or, $P\{|\frac{1}{n} S_n - \mu | \geq \epsilon\} \rightarrow 0$ as $n \rightarrow \infty$ for every choice $\epsilon>0$\\
 \textbf{Strong Law of Large Numbers}(Kolmogorov, conditions same)\\
 $\frac{1}{n} S_n \rightarrow^{a.e.} \mu$. Or,  $P\{|\frac{1}{n} S_n - \mu | \geq \epsilon\ i.o.\}=0$ for every $\epsilon>0$.
 \textbf{Central Limit Theorem}\\
-\textit{Suppose $X_1,X-2,...$ is a sequence of independent random variable drawn from a common distribution F with mean zero and variance one. For each n, let $S_n*=(X_1+...+X_n)/\sqrt{n}$. Then $S_n*$ converges in distribution to the standard normal.}\\
+\textit{Suppose $X_1,X_2,...$ is a sequence of independent random variable drawn from a common distribution F with mean zero and variance one. For each n, let $S_n*=(X_1+...+X_n)/\sqrt{n}$. Then $S_n*$ converges in distribution to the standard normal.}\\
 	$P\{a<S_n*<b\}\rightarrow\Phi(b)-\Phi(a)=\frac{1}{\sqrt{2\pi}}\int_{a}^{b}e^{-x^2/2}dx$
-\textit{If $E(X_k)=\mu$ and $Var(X_k)=\sigma^2$ then we can center and scale the variables such that $S_n*=(S_n - n\mu/\sqrt{n}\sigma)$ and the theorem holds for the new properly normalize $S_n*$.}
+\textit{If $E(X_k)=\mu$ and $Var(X_k)=\sigma^2$ then we can center and scale the variables such that $S_n*=(S_n - n\mu/\sqrt{n}\sigma)$ and the theorem holds for the new properly normalized $S_n*$.}
 
 \section{Inequalities}
 \textbf{Convexity} The chord lies above the curve\\
@@ -208,9 +208,10 @@ $\Psi(E(x))\leq E(\Psi(x))$\\
 \textbf{AM-GM} $ x_1^{p_1} x_2^{p_2}...x_n^{p_n}\leq p_1 x_1 +p_2 x_2 + ... p_n x_n$\\
 \textbf{Specialization of AM-GM} $x^{1/p} y^{1/q} \leq (1/p) x +(1/q) y$\\
 simplifies to: $ xy \leq (1/p) x^p +(1/q) y^p$\\
-\textbf{Holder's} $|E(XY)| \leq E(|XY|) \leq E(|X|)^{1/p} E(|Y|)^{1/q}$\\ 
-\textbf{Cauchy-Schwarz} If $p=q=2$ in Holder's $\rightarrow$ $|E(XY)^2| \leq E(X^2)E(Y^2)$\\
-\textbf{Minkowski} $p\geq 1$ then $ ||x+y|_p \leq ||x||_p + ||y||_p$\\
+\textbf{Holder's} $|E(XY)| \leq E(|XY|) \leq E(|X|^p)^{1/p} E(|Y|^q)^{1/q}$\\ 
+\textbf{Cauchy-Schwarz} If $p=q=2$ in Holder's $\rightarrow$ $E(XY)^2 \leq E(X^2)E(Y^2)$\\
+\textbf{Minkowski} $p\geq 1$ then $ ||x+y||_p \leq ||x||_p + ||y||_p$\\
+$||x||_p=E(|X|^p)^{1/p}$\\
 \textbf{Chebyshev} $X$ has finite second moment and $t$ is strictly positive.\\
 Then, $P\{|X-E(X)|\geq t\}\leq Var(X)/t^{2}$\\
 If $X_1,X-2,...$ is a sequence of independent random variable with common distibution F. For each n, let $S_n=(X_1+...+X_n)$.\\
@@ -302,10 +303,19 @@ $\int \cos x dx = \sin x$
 \textit{(Lemma 2)} If the series $\sum_{n}P(A_n)$ diverges. If the events $\{A_n, n\geq1\}$ are independent then $P(\lim\sup_{n}A_{n})=P\{A_{n} i.o\}=1$, and the events $A_n$ occur infinitely often with probability one.\\
 \section{Convergence}
 \textit{(Almost everywhere)A sequence of random variables $\{X_n,n\geq 1\}$ converges almost everywhere to a random variable $X$ if $P\{\omega:X_{n}(\omega) \not\rightarrow X(\omega)\}=0$}\\
-\textit{(Theorem) A random sequence $\{X_n, n\geq1\}$ converges a.e.\ to a random variable $X$ iff, for every $\epsilon\geq0$, we have $P(\lim\sup_n\{|X_n-X|<\epsilon\})=1$, or  $P(\lim\inf_n\{|X_n-X|\geq\epsilon\})=0$}\\
+\textit{(Theorem) A random sequence $\{X_n, n\geq1\}$ converges a.e.\ to a random variable $X$ iff, for every $\epsilon\geq0$, we have $P(\lim\inf_n\{|X_n-X|<\epsilon\})=1$, or  $P(\lim\sup_n\{|X_n-X|\geq\epsilon\})=0$}\\
 \textit{(Theorem) A random sequence $\{X_n, n\geq1\}$ converges a.e.\ iff, for every $\epsilon\geq0$, as $n\rightarrow \infty$, $P(\cup_{j\geq 1}\{|X_{n+j}-X_n|\geq\epsilon\})\rightarrow0$}\\
 \textit{(In probability)A sequence of random variables $\{X_n,n\geq 1\}$ converges in probability to a random variable $X$ if $\lim_n P\{|X_n-X|\geq\epsilon\})\}=0$, for every $\epsilon>0$}
 \textit{(Theorem) Convergence a.e.\ implies convergence in probability}
-\textit{(From convergence in P to a.e.) Show $\sum_{n}P\{|X_n-X|\geq \epsilon <\infty\}$, then by BC Lemma $P\{|X_n-X|\geq \epsilon \,i.o. \}=0$. Hence being by showing convergence in probability then leverage BC lemma to show that convergence is in a.e} 
+\textit{(From convergence in P to a.e.) Show $\sum_{n}P\{|X_n-X|\geq \epsilon <\infty\}$, then by BC Lemma $P\{|X_n-X|\geq \epsilon \,i.o. \}=0$. Hence being by showing convergence in probability then leverage BC lemma to show that convergence is in a.e}\\ 
+\textbf{Monotonce Convergence} \textit{Suppose $\{X_n\}$ is an increasing sequence of positive random variables converging pointwise to a random variable $X$, $0\leq X_n \uparrow X$.Then $\lim E(X_n)= E(X)$}
+\textit{(Theorem)Suppose X is an integrable, positive random variable. Then $\sum_{n=1}^{\infty}P\{X\geq n\}\leq E(X) < 1+ \sum_{n=1}^{\infty}$ If arithmetic, $E(X)=\sum_{n=1}^{\infty}=P\{X\geq n\}$} \\
+\textbf{Fatou's Lemma} \textit{Suppose $\{X_n\}$ is an increasing sequence of positive random variables on some probability space. Then $E(\lim\inf_{n\rightarrow \infty}X_n)\leq \lim\inf_{n\leftarrow\infty}E(X_n)$}
+\textbf{Dominated Convergence} \textit{Suppose $X_n \rightarrow X$ pointwise. If there exists an integrable random variable $Y$ s.t. $|X_n|\leq Y$ for each $n$ the $X$ is integrable, $E(|X|)\leq E(Y)$, and $\lim_{n\leftarrow\infty}E(X_n)=E(X)$}\\
+\textbf{Levi's Theorem}\textit{Suppose $\{X_n\}$ is an increasing sequence of random variables and there exists $M$ s.t. $E(X_n) \leq M$ for each $n$. Then there exists an integrable random variable $X$ such that $X_n \rightarrow X a.e.\ $, and moreover $E(X_n) \rightarrow E(X)$}\\
+\section{Lebesgue-related}
+\textbf{Lebesgue Integral}$E(X)=\int_{\Omega} X(\omega)P(d\omega)=\int_{R}xdF(x)$\\
+\textbf{Lebesgue Program - Simple function} $S_m(\omega)=\sum_{n=0}^{m2^m}\frac{n}{2^m}1_{A_{mn}}(\omega)$\\
+\textit{(Properties)} Functions are \textit{positive}, \textit{increasing}, and \textit{converges pointwise} to $X$, $S_m(\omega)\leftarrow X(\omega)$ for each $\omega$
 \end{multicols*}
 \end{document}
