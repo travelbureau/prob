@@ -183,8 +183,10 @@ $P(A_k|H)=\frac{P(H|A_k)P(A_k)}{\sum_{j \geq 1}{} P(H|A_j)P(A_j)}$
 \textbf{De Finneti's Theorem}\\
 \textit{$P\{L_1>x_1,...,L_{n=1}>x_{n+1}\}=(1-\frac{x_1}{\tau}-\frac{x_2}{\tau}...-\frac{x_{n+1}}{\tau})^n_+$}\\
 \section{Limit Laws}
-\textbf{Weak Law of Large Numbers}\\
-\textbf{Strong Law of Large Numbers}\\
+\textbf{Weak Law of Large Numbers}(Khinchin)\\
+If $X_1,X-2,...$ is a sequence of independent random variable with common distibution with finite mean $\mu$ and let $S_n=(X_1+...+X_n)$ for each $n$. Then $\frac{1}{n} S_n \rightarrow^{p} \mu$. Or, $P\{|\frac{1}{n} S_n - \mu | \geq \epsilon\} \rightarrow 0$ as $n \rightarrow \infty$ for every choice $\epsilon>0$\\
+\textbf{Strong Law of Large Numbers}(Kolmogorov, conditions same)\\
+$\frac{1}{n} S_n \rightarrow^{a.e.} \mu$. Or,  $P\{|\frac{1}{n} S_n - \mu | \geq \epsilon\ i.o.\}=0$ for every $\epsilon>0$.
 \textbf{Central Limit Theorem}\\
 \textit{Suppose $X_1,X-2,...$ is a sequence of independent random variable drawn from a common distribution F with mean zero and variance one. For each n, let $S_n*=(X_1+...+X_n)/\sqrt{n}$. Then $S_n*$ converges in distribution to the standard normal.}\\
 	$P\{a<S_n*<b\}\rightarrow\Phi(b)-\Phi(a)=\frac{1}{\sqrt{2\pi}}\int_{a}^{b}e^{-x^2/2}dx$
@@ -201,8 +203,11 @@ $\Psi(E(x))\leq E(\Psi(x))$\\
 simplifies to: $ xy \leq (1/p) x^p +(1/q) y^p$\\
 \textbf{Holder's} $|E(XY)| \leq E(|XY|) \leq E(|X|)^{1/p} E(|Y|)^{1/q}$\\ 
 \textbf{Cauchy-Schwarz} If $p=q=2$ in Holder's $\rightarrow$ $|E(XY)^2| \leq E(X^2)E(Y^2)$\\
-\textbf{Minkowski} $p\geq 1$ then $ ||x+y|_p \leq ||x||_p + ||y||_p$
-\textbf{Chebyshev}$P\{|S_n-n\mu|\geq n\epsilon\}\leq \frac{n\sigma^2}{n^2\epsilon^2}$\\
+\textbf{Minkowski} $p\geq 1$ then $ ||x+y|_p \leq ||x||_p + ||y||_p$\\
+\textbf{Chebyshev} $X$ has finite second moment and $t$ is strictly positive.\\
+Then, $P\{|X-E(X)|\geq t\}\leq Var(X)/t^{2}$\\
+If $X_1,X-2,...$ is a sequence of independent random variable with common distibution F. For each n, let $S_n=(X_1+...+X_n)$.\\
+$P\{|S_n-n\mu|\geq n\epsilon\}\leq \frac{n\sigma^2}{n^2\epsilon^2}$\\
 \textbf{Chernoff} $P\{S_n\geq t\} \leq (\inf\limits_{\lambda\geq 0} e^{-\lambda t/n}M(\lambda))^n $ and\\
 $P\{S_n\leq t\} \leq (\inf\limits_{\lambda\geq 0} e^{-\lambda t/n}M(-\lambda))^n $\\ 
 Where $M(\lambda)=E(e^{\lambda X_j})=\int_{\mathcal{R}} e^{\lambda x}dF(x)$ is the moment generating function\\
@@ -217,7 +222,7 @@ $\log _b \left( {x^n } \right) = n\log _b \left( x \right) $\\
 $\log _b \left( 1 \right) = 0 $\\
 $\log _b \left( b \right) = 1 $\\
 $\log _b \left( {xy} \right) = \log _b \left( x \right) + \log _b \left( y \right)$\\
-\vspace{20pt}
+%\vspace{10pt}
 \begin{multicols*}{3}
 $log(\infty)\rightarrow \infty$\\
 $log(0)\rightarrow -\infty$\\
