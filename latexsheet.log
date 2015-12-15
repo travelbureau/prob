@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  13 DEC 2015 20:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 DEC 2015 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,36 +307,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 97.
  [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-! Undefined control sequence.
-<argument> ...\frac {\alpha }{\Gamma (v)}(\alphax 
-                                                  )^{v-1}e^{-\alpha x}$
-l.280 ...{\Gamma(v)}(\alphax)^{v-1}e^{-\alpha x}$}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
  (./latexsheet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
-Package rerunfilecheck Info: File `latexsheet.out' has not changed.
-(rerunfilecheck)             Checksum: CEA8565D04F069E0421EFEC6E9CB341E;773.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
+
+
+Package rerunfilecheck Warning: File `latexsheet.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `latexsheet.out':
+(rerunfilecheck)             Before: 465D4B4073CC76D89D1058A31185A7B1;543
+(rerunfilecheck)             After:  BB93684366277E27A870DD6721DF4F0E;866.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
  ) 
 Here is how much of TeX's memory you used:
- 4937 strings out of 493117
- 73990 string characters out of 6135433
+ 4934 strings out of 493117
+ 73954 string characters out of 6135433
  192387 words of memory out of 5000000
- 8385 multiletter control sequences out of 15000+600000
+ 8380 multiletter control sequences out of 15000+600000
  7256 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,28p,684b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,28p,684b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
@@ -352,10 +347,10 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
 14/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2014
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on latexsheet.pdf (2 pages, 201212 bytes).
+Output written on latexsheet.pdf (2 pages, 202908 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
