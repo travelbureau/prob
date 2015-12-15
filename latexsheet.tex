@@ -180,8 +180,16 @@ $P(A_k|H)=\frac{P(H|A_k)P(A_k)}{\sum_{j \geq 1}{} P(H|A_j)P(A_j)}$
 
 \section{Inclusion-Exclusion}
 \textit{$S_k= \sum (P(A_{j_1}) \cap...\cap P(A_{j_k}))={n+1 \choose k} (1-ka)^n_+$}\\
+\textit{$P(A_1 \cup ...\cup A_n)=\sum_{k=1}^{n} (-1)^{k-1}S_k$}\\
+Let $P(m)$ be probability that exactly $m$ events occur \\
+Then, \textit{$P(m)=\sum_{k=0}^{n-m}(-1)^{k}{m+k \choose m}S_{m+k}$}\\ 
 \textbf{De Finneti's Theorem}\\
+Let $\tau>0$ and $L_1 ,..., L_{n+1}$ are successive spacings engendered by $n$ random points in iterval $[0,\tau)$, for every choice $x_1\geq 0, ...,$
 \textit{$P\{L_1>x_1,...,L_{n=1}>x_{n+1}\}=(1-\frac{x_1}{\tau}-\frac{x_2}{\tau}...-\frac{x_{n+1}}{\tau})^n_+$}\\
+\textit{(Covering Problem) $n+1$ random arcs, each of length $a$, $X_0,...,X_n$ random points on circle, probability that arcs cover unit circle}
+$A_j:$ event $j$th spacing $L_j$ exceeds $a$. \textit{$P(A_1 \cup ...\cup A_n)=(1-ka)^n_+$}
+\textit{$S_k= \sum (P(A_{j_1}) \cap...\cap P(A_{j_k}))={n+1 \choose k} (1-ka)^n_+$}\\
+\textit{$c_{n+1}=P(A_{1}^{c} \cup ...\cup A_{n}^{c})=\sum_{k=0}^{n+1}(-1)^{k}{n+1 \choose k}(1-ka)^n_+$ }  
 \section{Limit Laws}
 \textbf{Weak Law of Large Numbers}(Khinchin)\\
 If $X_1,X-2,...$ is a sequence of independent random variable with common distibution with finite mean $\mu$ and let $S_n=(X_1+...+X_n)$ for each $n$. Then $\frac{1}{n} S_n \rightarrow^{p} \mu$. Or, $P\{|\frac{1}{n} S_n - \mu | \geq \epsilon\} \rightarrow 0$ as $n \rightarrow \infty$ for every choice $\epsilon>0$\\
